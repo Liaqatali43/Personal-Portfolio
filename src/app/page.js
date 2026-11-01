@@ -5,6 +5,7 @@ import Projects from "./components/sections/Projects";
 import Capabilities from "./components/sections/Capabilities";
 import ShopifySpecialist from "./components/sections/ShopifySpecialty";
 import Process from "./components/sections/Process";
+import About from "./components/sections/About";
 
 export default function Home() {
   return (
@@ -34,6 +35,10 @@ export default function Home() {
 
         <section>
           <Process />
+        </section>
+
+        <section>
+          <About />
         </section>
       </main>
     </>
