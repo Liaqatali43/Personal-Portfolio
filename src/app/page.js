@@ -6,6 +6,8 @@ import Capabilities from "./components/sections/Capabilities";
 import ShopifySpecialist from "./components/sections/ShopifySpecialty";
 import Process from "./components/sections/Process";
 import About from "./components/sections/About";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/layout/Footer";
 
 export default function Home() {
   return (
@@ -37,10 +39,15 @@ export default function Home() {
           <Process />
         </section>
 
-        <section>
+        <section id="about">
           <About />
         </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
+      <Footer />
     </>
   );
 }

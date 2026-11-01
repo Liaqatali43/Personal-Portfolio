@@ -281,11 +281,8 @@ function ProjectCard({ project, index }) {
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="border-t border-white/10 bg-[#0e1118] py-24 sm:py-32"
-    >
-      <div className="mx-auto max-w-[1240px] px-6">
+    <div className="border-t border-white/10 bg-[#0e1118] py-24 sm:py-32">
+      <div className="mx-auto ] px-6">
         {/* Section Heading */}
         <div className="mb-16 grid gap-6 md:grid-cols-[1fr_2fr_1.4fr] md:items-end md:gap-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-sky-400">
@@ -311,6 +308,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

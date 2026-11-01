@@ -164,7 +164,7 @@ export default function ShopifySpecialist() {
       id="shopify"
       className="overflow-hidden border-y border-[#95bf47]/15 bg-[#0d120d] py-24 sm:py-32"
     >
-      <div className="mx-auto grid max-w-[1240px] items-center gap-14 px-6 lg:grid-cols-[0.82fr_1.18fr] lg:gap-[88px]">
+      <div className="mx-auto grid  items-center gap-14 px-6 lg:grid-cols-[0.82fr_1.18fr] lg:gap-[88px]">
         {/* Left Content */}
         <div className="relative z-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#95bf47]">

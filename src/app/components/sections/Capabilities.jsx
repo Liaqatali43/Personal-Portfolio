@@ -31,10 +31,10 @@ const capabilities = [
   },
 ];
 
-export default function ShopifySpecialty() {
+export default function Capabilities() {
   return (
-    <section className="border-t border-white/10 py-24 sm:py-32">
-      <div className="mx-auto max-w-[1240px] px-6">
+    <div className="border-t border-white/10 py-24 sm:py-32">
+      <div className="mx-auto px-6">
         {/* Section Heading */}
         <div className="mb-12 grid gap-6 md:grid-cols-[1fr_2fr_1.4fr] md:items-end md:gap-10">
           <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-sky-400">
@@ -84,6 +84,6 @@ export default function ShopifySpecialty() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

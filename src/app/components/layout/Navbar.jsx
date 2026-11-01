@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#0B0D12]/85 backdrop-blur-xl">
       <nav
-        className="container mx-auto flex h-[76px] items-center justify-between px-6 lg:px-8"
+        className=" mx-auto flex h-[76px] items-center justify-between px-6 lg:px-8"
         aria-label="Primary navigation"
       >
         {/* Logo */}

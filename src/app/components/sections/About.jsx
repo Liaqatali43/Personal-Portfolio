@@ -23,8 +23,8 @@ function CheckIcon() {
 
 export default function About() {
   return (
-    <section id="about" className="border-t border-white/10 py-24 sm:py-32">
-      <div className="mx-auto grid max-w-[1240px] gap-12 px-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-[100px]">
+    <div className="border-t border-white/10 py-24 sm:py-32">
+      <div className="mx-auto grid gap-12 px-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-[100px]">
         {/* Left Side */}
         <div className="relative border-b border-white/10 pb-8 lg:border-b-0 lg:border-r lg:pb-0">
           <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-sky-400">
@@ -74,6 +74,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
