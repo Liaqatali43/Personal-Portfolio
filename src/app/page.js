@@ -1,4 +1,5 @@
 import Navbar from "../app/components/layout/Navbar";
+import Hero from "./components/sections/Hero";
 
 export default function Home() {
   return (
@@ -6,7 +7,9 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <section id="home">{/* Hero Section */}</section>
+        <section id="home">
+          <Hero />
+        </section>
 
         <section id="projects">{/* Projects Section */}</section>
 
