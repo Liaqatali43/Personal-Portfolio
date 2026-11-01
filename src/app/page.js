@@ -2,6 +2,7 @@ import Navbar from "../app/components/layout/Navbar";
 import Expertise from "./components/sections/Expertise";
 import Hero from "./components/sections/Hero";
 import Projects from "./components/sections/Projects";
+import Capabilities from "./components/sections/ShopifySpecialty";
 
 export default function Home() {
   return (
@@ -21,7 +22,9 @@ export default function Home() {
           <Projects />
         </section>
 
-        <section id="shopify">{/* Shopify Section */}</section>
+        <section>
+          <Capabilities />
+        </section>
       </main>
     </>
   );
