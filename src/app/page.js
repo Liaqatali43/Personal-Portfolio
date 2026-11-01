@@ -1,6 +1,7 @@
 import Navbar from "../app/components/layout/Navbar";
 import Expertise from "./components/sections/Expertise";
 import Hero from "./components/sections/Hero";
+import Projects from "./components/sections/Projects";
 
 export default function Home() {
   return (
@@ -16,7 +17,9 @@ export default function Home() {
           <Expertise />
         </section>
 
-        <section id="projects">{/* Projects Section */}</section>
+        <section id="projects">
+          <Projects />
+        </section>
 
         <section id="shopify">{/* Shopify Section */}</section>
       </main>
