@@ -19,7 +19,7 @@ export default function Home() {
           <Hero />
         </section>
 
-        <section id="expertise">
+        <section id="frontend">
           <Expertise />
         </section>
 
