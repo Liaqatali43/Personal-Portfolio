@@ -1,45 +1,4 @@
-const projects = [
-  {
-    number: "01",
-    type: "Shopify Development",
-    title: "Storefront Customization",
-    description:
-      "A premium ecommerce experience with modular Liquid sections, flexible merchandising, and responsive product journeys.",
-    tech: ["Shopify Liquid", "HTML", "CSS", "JavaScript"],
-    theme: "shopify",
-    preview: "store",
-  },
-  {
-    number: "02",
-    type: "Frontend Application",
-    title: "Ecommerce Application",
-    description:
-      "A responsive shopping experience with intuitive filtering, persistent cart state, and a fast component-led interface.",
-    tech: ["React", "Tailwind CSS", "Redux Toolkit"],
-    theme: "commerce",
-    preview: "commerce",
-  },
-  {
-    number: "03",
-    type: "API Integration",
-    title: "Country Information App",
-    description:
-      "An exploratory data interface with fast search, region filters, and focused dynamic detail pages.",
-    tech: ["React", "JavaScript", "REST API", "Tailwind CSS"],
-    theme: "country",
-    preview: "country",
-  },
-  {
-    number: "04",
-    type: "Personal Platform",
-    title: "Developer Portfolio",
-    description:
-      "A considered personal site built around reusable components, modern typography, and purposeful interactions.",
-    tech: ["Next.js", "Tailwind CSS", "JavaScript"],
-    theme: "portfolio",
-    preview: "portfolio",
-  },
-];
+import { projects } from "@/app/data/projects";
 
 // Project preview designs
 function ProjectPreview({ type }) {
@@ -181,8 +140,8 @@ function ProjectPreview({ type }) {
   );
 }
 
-function BrowserFrame({ children, url }) {
-  return (
+function BrowserFrame({ children, url, href }) {
+  const frame = (
     <div className="overflow-hidden rounded-md bg-white shadow-2xl">
       <div className="flex h-9 items-center gap-1.5 bg-[#e8e8e8] px-3">
         <span className="h-2 w-2 rounded-full bg-[#f28b82]" />
@@ -196,6 +155,13 @@ function BrowserFrame({ children, url }) {
 
       {children}
     </div>
+  );
+
+  if (!href) return frame;
+  return (
+    <a href={href} target="blank">
+      {frame}
+    </a>
   );
 }
 
@@ -222,8 +188,15 @@ function ProjectCard({ project, index }) {
                 : "bg-[#26201d]"
         }`}
       >
-        <BrowserFrame url={`demo.liaqat.dev/${project.theme}`}>
-          <ProjectPreview type={project.preview} />
+        <BrowserFrame url={project.repoUrl} href={project.liveUrl}>
+          {/* <ProjectPreview type={project.preview} /> */}
+
+          <img
+            src={project.image}
+            alt={`${project.title}`}
+            className="block w-full"
+            loading="lazy"
+          />
         </BrowserFrame>
 
         <span className="absolute bottom-2 right-4 font-[family-name:var(--font-space)] text-5xl font-semibold text-white/20">
@@ -268,8 +241,16 @@ function ProjectCard({ project, index }) {
         </div>
 
         <a
-          href="#contact"
+          href={project.repoUrl}
+          target="blank"
           className="inline-flex items-center gap-4 border-b border-white/20 pb-2 text-xs font-semibold text-white transition-colors hover:border-sky-400 hover:text-sky-400"
+        >
+          Repo Url
+          <span className="text-base">↗</span>
+        </a>
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-4 border-b ml-4 border-white/20 pb-2 text-xs font-semibold text-white transition-colors hover:border-sky-400 hover:text-sky-400"
         >
           View Project
           <span className="text-base">↗</span>

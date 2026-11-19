@@ -49,12 +49,35 @@ function LinkedInIcon() {
   );
 }
 
+const FORMSPREE_URL = "https://formspree.io/f/xvkarnod";
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("idle");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setStatus("sending");
     setSubmitted(true);
+
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "Application/json" },
+      });
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -179,14 +202,14 @@ export default function Contact() {
             type="submit"
             className="inline-flex w-fit items-center justify-center gap-4 bg-sky-400 px-6 py-4 text-xs font-semibold text-[#07131b] transition-all hover:bg-sky-300"
           >
-            {submitted ? "Inquiry Ready to Send" : "Send Inquiry"}
+            {status == "success" ? "Inquiry Ready to Send" : "Send Inquiry"}
 
-            {submitted ? <CheckIcon /> : <ArrowIcon />}
+            {status == "success" ? <CheckIcon /> : <ArrowIcon />}
           </button>
 
-          {submitted && (
-            <p className="text-[11px] leading-5 text-[#95bf47]">
-              This demo form is ready to connect to your preferred form service.
+          {status == "success" && (
+            <p role="status">
+              Thanks! I’ve received your message; I’ll reply soon.
             </p>
           )}
         </form>
