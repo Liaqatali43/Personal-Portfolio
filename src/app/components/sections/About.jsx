@@ -26,8 +26,8 @@ const ABOUT = {
   story:
     "I started learning web development because [apni real wajah likhein]. Today I build responsive React interfaces and Shopify themes, including custom sections and an Ajax cart drawer. I'm always learning and improving my process.",
   looking: "Currently open to freelance projects and junior frontend roles.",
-  location: "[Your City], Pakistan · PKT (UTC+5)",
-  photo: "", // jaise "/about/me.jpg". Khali ho to initials avatar dikhega
+  location: "MSTP Skardu Sundus Room_5 GB, Pakistan · PKR",
+  photo: "images/portfolio about image (1).png", // jaise "/about/me.jpg". Khali ho to initials avatar dikhega
   cv: "/Liaqat-CV.pdf",
   initials: "L",
 };
@@ -102,6 +102,7 @@ export default function About() {
               className="inline-flex items-center gap-2 rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-cyan-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             >
               {/* Download CV <Icon name="arrow" /> */}
+              Download Resume
             </a>
             <a
               href="#contact"
