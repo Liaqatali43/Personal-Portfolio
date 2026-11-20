@@ -28,7 +28,7 @@ const ABOUT = {
   looking: "Currently open to freelance projects and junior frontend roles.",
   location: "MSTP Skardu Sundus Room_5 GB, Pakistan · PKR",
   photo: "images/portfolio about image (1).png", // jaise "/about/me.jpg". Khali ho to initials avatar dikhega
-  cv: "/Liaqat-CV.pdf",
+  cv: "images/resume.png",
   initials: "L",
 };
 
