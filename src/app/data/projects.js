@@ -7,6 +7,7 @@ export const projects = [
       "A considered personal site built around reusable components, modern typography, and purposeful interactions.",
     tech: ["Next.js", "Tailwind CSS", "JavaScript"],
     repoUrl: "https://github.com/Liaqatali43/Personal-Portfolio.git",
+    liveUrl: "https://liaqat-portfolio-azure.vercel.app/",
     image: "images/portfolio/portfolioImage.png",
     theme: "portfolio",
     preview: "portfolio",

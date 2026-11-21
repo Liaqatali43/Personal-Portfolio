@@ -248,13 +248,15 @@ function ProjectCard({ project, index }) {
           Repo Url
           <span className="text-base">↗</span>
         </a>
-        <a
-          href="#contact"
-          className="inline-flex items-center gap-4 border-b ml-4 border-white/20 pb-2 text-xs font-semibold text-white transition-colors hover:border-sky-400 hover:text-sky-400"
-        >
-          View Project
-          <span className="text-base">↗</span>
-        </a>
+        {project.liveUrl && (
+          <a
+            href={project.liveUrl}
+            className="inline-flex items-center gap-4 border-b ml-4 border-white/20 pb-2 text-xs font-semibold text-white transition-colors hover:border-sky-400 hover:text-sky-400"
+          >
+            View Project
+            <span className="text-base">↗</span>
+          </a>
+        )}
       </div>
     </article>
   );
