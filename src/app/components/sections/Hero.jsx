@@ -141,7 +141,7 @@ export default function Hero() {
   ];
 
   return (
-    <div className="mx-auto grid min-h-[800px] w-full  grid-cols-1 items-center gap-12 overflow-hidden px-6 pb-20 pt-36 md:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+    <div className="mx-auto bg-black grid min-h-[800px] w-full  grid-cols-1 items-center gap-12 overflow-hidden px-6 pb-20 pt-36 md:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
       {/* Left Content */}
       <div className="relative z-10">
         {/* Availability */}
